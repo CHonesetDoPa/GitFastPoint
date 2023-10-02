@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# 提示信息
+echo "本脚本用于方便使用Git"
+echo ""
+echo "-p 参数会直接询问commit message并推送到远端"
+echo "-c 参数会询问克隆的地址"
+echo "-l 参数会拉取远端内容到本地"
+echo ""
+# 检查参数是否为 "-p"、"-c" 或 "-l"
+if [ "$1" != "-p" ] && [ "$1" != "-c" ] && [ "$1" != "-l" ]; then
+  echo "请使用 -p、-c 或 -l 参数确认执行"
+  exit 1
+fi
+
+# 获取用户输入的 commit message 或 git 地址
+if [ "$1" == "-p" ]; then
+  read -p "请输入commit message: " message
+elif [ "$1" == "-c" ]; then
+  read -p "请输入git地址: " git_url
+fi
+
+# 执行相应的 git 命令
+if [ "$1" == "-p" ]; then
+  git add .
+  git commit -m "$message"
+  git push
+elif [ "$1" == "-c" ]; then
+  git clone $git_url
+elif [ "$1" == "-l" ]; then
+  git pull
+fi
+
