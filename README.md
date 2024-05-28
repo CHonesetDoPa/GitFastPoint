@@ -3,7 +3,7 @@ GitFastPoint 是一个给像cc一样懒的人类用的怪东西
 
 # 用法
 下载gfp脚本
-从[Github Release]()或直接使用git克隆
+从[Github Release](https://github.com/CHonesetDoPa/GitFastPoint/releases/download/0.1/gfp)或直接使用git克隆
 > git clone https://github.com/CHonesetDoPa/GitFastPoint.git
 
 赋予执行权限
