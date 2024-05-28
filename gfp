@@ -19,15 +19,25 @@ if [ $exitstatus = 0 ]; then
             fi
             ;;
         2)
-            # Add code to handle option 2
+            git pull
+            echo "Pulled Repo."
             ;;
         3)
-            
+            git_message=$(whiptail --inputbox "Enter the Git Commit Message:" 8 78 --title "Commit Message" 3>&1 1>&2 2>&3)
+            if [ -n "$git_message" ]; then
+                git add .
+                git commit -m "$git_message"
+                git push
+                echo "Pushed to Origin."
+            else
+                echo "Git Commit Message is empty. Cancelled."
+            fi
             ;;
         4)
             git add .
             git commit -m "Update something"
             git push
+            echo "Pushed to Origin With Default Commit Message)"
             ;;
     esac
 else
