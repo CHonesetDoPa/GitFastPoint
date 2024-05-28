@@ -1,0 +1,35 @@
+#!/bin/bash
+
+OPTION=$(whiptail --title "Menu" --backtitle "GitFastPoint 0.1" --menu "Choose an option" 15 60 4 \
+"1" "Clone a Git Repo" \
+"2" "Pull Repo" \
+"3" "Push to Origin (with custom commit message)" \
+"4" "Push to Origin (with default commit message)" --backtitle "GitFastPoint 0.1" 3>&1 1>&2 2>&3)
+
+exitstatus=$?
+if [ $exitstatus = 0 ]; then
+    case $OPTION in
+        1)
+            git_url=$(whiptail --inputbox "Enter the Git URL:" 8 78 --title "Git URL" 3>&1 1>&2 2>&3)
+            if [ -n "$git_url" ]; then
+                git clone "$git_url"
+                echo "Cloning from $git_url"
+            else
+                echo "Git URL is empty. Cancelled."
+            fi
+            ;;
+        2)
+            # Add code to handle option 2
+            ;;
+        3)
+            
+            ;;
+        4)
+            git add .
+            git commit -m "Update something"
+            git push
+            ;;
+    esac
+else
+    echo "Cancelled."
+fi
