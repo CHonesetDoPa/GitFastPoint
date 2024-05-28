@@ -1,10 +1,12 @@
 #!/bin/bash
 
-OPTION=$(whiptail --title "Menu" --backtitle "GitFastPoint 0.1" --menu "Choose an option" 15 60 4 \
+OPTION=$(whiptail --title "Menu" --backtitle "GitFastPoint 0.1" --menu "Choose an option" 15 80 6 \
 "1" "Clone a Git Repo" \
 "2" "Pull Repo" \
 "3" "Push to Origin (with custom commit message)" \
-"4" "Push to Origin (with default commit message)" --backtitle "GitFastPoint 0.1" 3>&1 1>&2 2>&3)
+"4" "Push to Origin (with default commit message)" \
+"5" "Add GitFastPoint into /usr/bin (need sudo)" \
+"6" "Remove GitFastPoint from /usr/bin (need sudo)" --backtitle "GitFastPoint 0.1" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
@@ -38,6 +40,14 @@ if [ $exitstatus = 0 ]; then
             git commit -m "Update something"
             git push
             echo "Pushed to Origin With Default Commit Message)"
+            ;;
+        5)
+            sudo cp ./gfp /usr/bin/gfp
+            echo "Added GitFastPoint into /usr/bin"
+            ;;
+        6)  
+            sudo rm /usr/bin/gfp
+            echo "Removed GitFastPoint from /usr/bin"
             ;;
     esac
 else
