@@ -25,9 +25,9 @@ GitFastPoint 是一个给像cc一样懒的人类用的怪东西
 
 # gfp界面功能
 
-1.克隆Repo
-2.拉取到本地
-3.自定义commit message 推送到远端
-4.默认commit message 推送到远端
-5.添加gfp和gfpp到/usr/bin（使得此脚本可在任何目录下可用）
-6.移除/usr/bin中的gfp和gfpp（自删除脚本）
+1. 克隆Repo  
+2. 拉取到本地  
+3. 自定义commit message 推送到远端  
+4. 默认commit message 推送到远端  
+5. 添加gfp和gfpp到/usr/bin（使得此脚本可在任何目录下可用）  
+6. 移除/usr/bin中的gfp和gfpp（自删除脚本）  
