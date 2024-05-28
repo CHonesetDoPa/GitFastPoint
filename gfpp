@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+echo "GitFastPoint Fast Push"
+echo -e "\n"
+git add .
+git commit -m "update something"
+git push

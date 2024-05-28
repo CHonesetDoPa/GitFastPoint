@@ -43,10 +43,12 @@ if [ $exitstatus = 0 ]; then
             ;;
         5)
             sudo cp ./gfp /usr/bin/gfp
+            sudo cp ./gfpp /usr/bin/gfpp
             echo "Added GitFastPoint into /usr/bin"
             ;;
         6)  
             sudo rm /usr/bin/gfp
+            sudo rm /usr/bin/gfpp
             echo "Removed GitFastPoint from /usr/bin"
             ;;
     esac
