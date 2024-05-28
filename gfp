@@ -45,7 +45,21 @@ if [ $exitstatus = 0 ]; then
             ;;
         5)
             sudo cp ./gfp /usr/bin/gfp
-            sudo cp ./gfpp /usr/bin/gfpp
+            #!/bin/bash
+
+            # 创建脚本文件
+            echo '#!/bin/bash
+
+            # GitFastPoint Pushfast
+
+            echo "GitFastPoint Pushfast"
+            echo -e "\n"
+            git add .
+            git commit -m "update something"
+            git push' > gfpp_temp.sh
+            sudo mv gfpp_temp.sh /usr/bin/gfpp
+            sudo chmod +x /usr/bin/gfpp
+
             echo "Added GitFastPoint into /usr/bin"
             ;;
         6)  
