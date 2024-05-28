@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# GitFastPoint
+
 OPTION=$(whiptail --title "Menu" --backtitle "GitFastPoint 0.1" --menu "Choose an option" 15 80 6 \
 "1" "Clone a Git Repo" \
 "2" "Pull Repo" \
@@ -47,8 +49,7 @@ if [ $exitstatus = 0 ]; then
             echo "Added GitFastPoint into /usr/bin"
             ;;
         6)  
-            sudo rm /usr/bin/gfp
-            sudo rm /usr/bin/gfpp
+            sudo rm -v /usr/bin/gfp /usr/bin/gfpp
             echo "Removed GitFastPoint from /usr/bin"
             ;;
     esac

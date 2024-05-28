@@ -1,7 +1,8 @@
 #!/bin/bash
 
+# GitFastPoint Pushfast
 
-echo "GitFastPoint Fast Push"
+echo "GitFastPoint Pushfast"
 echo -e "\n"
 git add .
 git commit -m "update something"
