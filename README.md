@@ -1,6 +1,10 @@
 # GitFastPoint
 GitFastPoint 是一个给像cc一样懒的人类用的怪东西
 
+# 能做什么
+1.  给一些不习惯和懒惰的人类提供的方便git功能入口
+2.  提供一个叫gfpp的快速push工具，在可能猝死（划掉）的情况下推送代码
+
 # 用法
 下载gfp脚本
 从[Github Release](https://github.com/CHonesetDoPa/GitFastPoint/releases/download/0.1/gfp)或直接使用git克隆
